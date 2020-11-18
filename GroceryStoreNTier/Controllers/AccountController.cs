@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using GroceryStoreNTier.Models;
 using GroceryStoreNTier.Providers;
 using GroceryStoreNTier.Results;
+using GroceryStore.Data;
 
 namespace GroceryStoreNTier.Controllers
 {

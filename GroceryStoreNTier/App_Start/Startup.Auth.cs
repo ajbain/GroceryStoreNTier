@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using GroceryStoreNTier.Providers;
 using GroceryStoreNTier.Models;
+using GroceryStore.Data;
 
 namespace GroceryStoreNTier
 {
