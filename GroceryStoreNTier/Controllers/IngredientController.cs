@@ -32,5 +32,15 @@ namespace GroceryStoreNTier.Controllers
                 return InternalServerError();
             return Ok();
         }
+
+        public IHttpActionResult Put(IngredientEdit ingredient)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var service = CreateIngredientService();
+            if (!service.UpdateIngredient(ingredient))
+                return InternalServerError();
+            return Ok();
+        }
     }
 }

@@ -44,5 +44,21 @@ namespace GroceryStore.Services
                 return query.ToArray();
             }
         }
+        public bool UpdateIngredient(IngredientEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Ingredients
+                    .Single(e => e.Id == model.IngredientID);
+                entity.Name = model.Name;
+                entity.Price = model.Price;
+                entity.Quantity = model.Quantity;
+                entity.UPC = model.UPC;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
