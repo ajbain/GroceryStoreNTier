@@ -60,5 +60,17 @@ namespace GroceryStore.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+        public bool DeleteIngredient(int ingredientId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Ingredients
+                    .Single(e => e.Id == ingredientId);
+                ctx.Ingredients.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

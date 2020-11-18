@@ -42,5 +42,13 @@ namespace GroceryStoreNTier.Controllers
                 return InternalServerError();
             return Ok();
         }
+        public IHttpActionResult Delete(int id)
+        {
+            var service = CreateIngredientService();
+            if (!service.DeleteIngredient(id))
+            return InternalServerError();
+            return Ok();
+
+        }
     }
 }
