@@ -207,6 +207,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngredientController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -310,6 +311,14 @@
     <ProjectReference Include="..\GroceryStore.Data\GroceryStore.Data.csproj">
       <Project>{2BA0AF86-270B-42CD-B03B-42D779F6ADBC}</Project>
       <Name>GroceryStore.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GroceryStore.Models\GroceryStore.Models.csproj">
+      <Project>{81255D39-621B-468D-9691-01BCC75867C2}</Project>
+      <Name>GroceryStore.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GroceryStore.Services\GroceryStore.Services.csproj">
+      <Project>{E5AE4423-819F-40BB-A28F-C555ADBD9251}</Project>
+      <Name>GroceryStore.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
