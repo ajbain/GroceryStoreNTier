@@ -33,6 +33,7 @@ namespace GroceryStore.Data
             return new ApplicationDbContext();
         }
         public DbSet<Ingredients> Ingredients { get; set; }
+        public DbSet<Transaction> Transaction { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
